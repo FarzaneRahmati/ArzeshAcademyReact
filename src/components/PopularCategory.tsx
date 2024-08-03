@@ -1,6 +1,8 @@
 import { FunctionComponent } from "react";
 import PopularCategoryItem from "./PopularCategoryItem";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 export type PopularCategoryType = {
   className?: string;
 };
@@ -8,22 +10,27 @@ export type PopularCategoryType = {
 const PopularCategory: FunctionComponent<PopularCategoryType> = ({
   className = "",
 }) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+  };
   return (
-    <section
-      className={`bg-white flex flex-row items-center justify-center text-center text-[1.25rem] text-title font-h6-bold-16 ${className}`}
-    >
-      <div className="w-[90rem] flex flex-col items-center justify-start gap-[2.187rem]">
-        <div className="self-stretch flex flex-col items-center justify-start gap-[0.625rem]">
-          <b className="self-stretch relative leading-[2rem]">
+    <section className={` w-3/4 pb-10 m-auto flex flex-col gap-[1.5rem] text-[1.25rem] text-title ${className}`}>
+      <div className="self-stretch flex flex-col items-center justify-start gap-[0.625rem]">
+          <b className="leading-[2rem]">
             دسته های پر مخاطب
           </b>
           <img
-            className="w-[6.25rem] relative h-[0.938rem] overflow-hidden shrink-0"
+            className="w-[6.25rem] h-[0.938rem]"
             alt=""
             src="/vector-1.svg"
           />
         </div>
-        <div className="self-stretch overflow-x-auto flex flex-row items-center justify-center gap-[1.5rem] text-[1rem] sm:flex sm:flex-nowrap">
+      <div className="slider-container">
+        <Slider {...settings}>
           <PopularCategoryItem
             image="/team18-1@2x.png"
             icon="/group-2@2x.png"
@@ -48,47 +55,24 @@ const PopularCategory: FunctionComponent<PopularCategoryType> = ({
             title="Mobile Application"
             caption="1درس"
           />
-           <PopularCategoryItem
+          <PopularCategoryItem
             image="/person-1-1@2x.png"
             icon="/group-5@2x.png"
             title="Mobile Application"
             caption="1درس"
           />
-           <PopularCategoryItem
+          <PopularCategoryItem
             image="/person-1-1@2x.png"
             icon="/group-5@2x.png"
             title="Mobile Application"
             caption="1درس"
           />
-        </div>
-        <span className="self-stretch flex flex-row items-center justify-center">
-          <img
-            className="w-[3.75rem] relative h-[3.75rem] overflow-hidden shrink-0"
-            alt=""
-            src="/dot-svgrepocom.svg"
-          />
-          <img
-            className="w-[3.75rem] relative h-[3.75rem] overflow-hidden shrink-0 ml-[-2.563rem]"
-            alt=""
-            src="/dot-svgrepocom.svg"
-          />
-          <img
-            className="w-[3.75rem] relative h-[3.75rem] overflow-hidden shrink-0 ml-[-2.563rem]"
-            alt=""
-            src="/dot-svgrepocom.svg"
-          />
-          <img
-            className="w-[3.75rem] relative h-[3.75rem] overflow-hidden shrink-0 ml-[-2.563rem]"
-            alt=""
-            src="/dot-svgrepocom.svg"
-          />
-          <img
-            className="w-[3.75rem] relative h-[3.75rem] overflow-hidden shrink-0 ml-[-2.563rem]"
-            alt=""
-            src="/dot-svgrepocom1.svg"
-          />
-        </span>
+        </Slider>
       </div>
+
+      {/* </div> */}
+      
+      {/* </div> */}
     </section>
   );
 };

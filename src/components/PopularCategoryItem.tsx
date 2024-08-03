@@ -9,7 +9,6 @@ export type PopularCategoryItemType = {
 };
 
 const PopularCategoryItem: FunctionComponent<PopularCategoryItemType> = ({
-  className = "",
   image,
   icon,
   title,
@@ -17,7 +16,7 @@ const PopularCategoryItem: FunctionComponent<PopularCategoryItemType> = ({
 }) => {
   return (
     <div
-      className={`h-[15.938rem] w-[17.313rem] rounded-lg flex flex-col items-center justify-center gap-[1.437rem] min-w-[17.313rem] text-center text-[1rem] text-title font-h6-bold-16 ${className}`}
+      className={`h-[15.938rem] w-[17.313rem] rounded-lg flex flex-col items-center justify-center gap-[1.437rem] min-w-[17.313rem] text-center text-[1rem] text-title`}
     >
       <div className="self-stretch flex flex-col items-start justify-start relative gap-[0.625rem]">
         <img

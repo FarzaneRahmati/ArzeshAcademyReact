@@ -19,7 +19,7 @@ const HomePage: FunctionComponent = () => {
             alt=""
             src="/image-571@2x.png"
           />
-          <span className="absolute  w-[9rem] h-1/5 bottom-0 right-[15rem] text-xl top-0 mt-auto mb-auto text-right text-white md:hidden ">بهترین دوره ها را در آکادمی ارزش دنبال کنید</span>
+          <span className="absolute  h-1/5 bottom-0 right-[18rem] w-[8rem] top-0 mt-auto mb-auto text-right text-white md:hidden ">بهترین دوره ها را در آکادمی ارزش دنبال کنید</span>
         </div>
         <PopularCategory />
         <TopCourses />

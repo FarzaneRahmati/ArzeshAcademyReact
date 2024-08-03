@@ -2,7 +2,6 @@ import { FunctionComponent } from "react";
 import { useState, useCallback } from "react";
 import PortalDrawer from "./PortalDrawer";
 import DrawerMenu from "./DrawerMenu";
-import Navigation from "./Navigation";
 export type HeaderType = {
   className?: string;
 };

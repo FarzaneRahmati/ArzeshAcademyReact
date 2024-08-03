@@ -1,5 +1,8 @@
 import { FunctionComponent } from "react";
-
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
+import "tippy.js/themes/light.css";
+import 'tippy.js/animations/shift-away.css';
 export type NavigationType = {
   className?: string;
 };
@@ -47,19 +50,57 @@ const Navigation: FunctionComponent<NavigationType> = ({ className = "" }) => {
             >
               اساتید
             </a>
-            <a className="[text-decoration:none] w-[6.25rem] rounded bg-gray-300 overflow-hidden shrink-0 flex flex-row items-center justify-center py-[0.937rem] px-[1.875rem] box-border cursor-pointer text-[inherit]"
+            <a
+              className="[text-decoration:none] w-[6.25rem] rounded bg-gray-300 overflow-hidden shrink-0 flex flex-row items-center justify-center py-[0.937rem] px-[1.875rem] box-border cursor-pointer text-[inherit]"
               href="https://www.google.com"
               target="_blank"
             >
               دوره ها
             </a>
             <hr className="w-[0.063rem]  box-border h-[2rem] border-r-[2px] border-solid border-black" />
-            <div className="w-[10rem] bg-gray-300 overflow-hidden shrink-0 flex flex-row items-center justify-start py-[0.937rem] px-[1.875rem] box-border cursor-pointer">
-              <span className="mr-2	 font-medium">
-                دسته بندی
-              </span>
-              <i className="bi bi-grid-3x3-gap-fill"></i>
-            </div>
+            <Tippy
+              theme={"light"}
+              placement={"bottom"}
+              interactive={true}
+              offset={[0,10]}
+              content={
+                <div className="flex flex-col w-[12rem]  cursor-pointer text-right content-start gap-[1.5rem] p-[.5rem]">
+                  <Tippy
+                    theme={"light"}
+                    placement={"right"}
+                    interactive={true}
+                    animation={"shift-away"}
+                    offset={[85,10]}
+                    content={
+                      <div className="flex flex-col w-[12rem]  cursor-pointer text-right content-start gap-[1.5rem] p-[.5rem]">
+                        <span> زیر دسته</span>
+                        <span> زیردسته</span>
+                        <span> زیردسته</span>
+                        <span> زیردسته</span>
+                        <span>زیردسته</span>
+                      </div>
+                    }
+                  >
+                    <div className="flex">
+                      <i className="bi bi-chevron-left"></i>
+                      <span className=" flex-1">دسته 1</span>
+                    </div>
+                  </Tippy>
+                  <span>دسته 2</span>
+                  <span>دسته 3</span>
+                  <span>دسته 4</span>
+                  <span>دسته 5</span>
+                  <span>دسته 6</span>
+                  <span>دسته 7</span>
+                  <span>دسته 8</span>
+                </div>
+              }
+            >
+              <div className="w-[10rem] bg-gray-300 overflow-hidden shrink-0 flex flex-row items-center justify-start py-[0.937rem] px-[1.875rem] box-border cursor-pointer">
+                <span className="mr-2	 font-medium">دسته بندی</span>
+                <i className="bi bi-grid-3x3-gap-fill"></i>
+              </div>
+            </Tippy>
           </div>
         </div>
       </nav>
