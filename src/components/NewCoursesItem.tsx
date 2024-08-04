@@ -1,4 +1,5 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState } from "react";
+import { Rating } from "react-simple-star-rating";
 
 export type NewCoursesItemType = {
   className?: string;
@@ -7,7 +8,7 @@ export type NewCoursesItemType = {
   category?: string;
   image?: string;
   voit?: string;
-  rating?: string;
+  rating?: number;
   title?: string;
 };
 
@@ -31,48 +32,24 @@ const NewCoursesItem: FunctionComponent<NewCoursesItemType> = ({
           alt=""
           src={image}
         />
-        <div className="h-[2.375rem] w-[8.188rem] !m-[0] absolute top-[10] left-[8.75rem] rounded-10xs bg-primary-orange box-border overflow-hidden shrink-0 flex flex-row items-center justify-center py-[0.25rem] px-[0.75rem] gap-[0.625rem] right-[10] z-[1] border-[1px] border-solid border-darkseagreen">
-          <b className="relative leading-[2rem]">{hour}</b>
-          <img
-            className="w-[1.563rem] relative h-[1.563rem] overflow-hidden shrink-0"
-            alt=""
-            src="/clockcircle-svgrepocom.svg"
-          />
+        <div className="h-[30px] w-[80px]  absolute top-[10px] right-[10px] rounded-10xs bg-primary-orange flex  items-center justify-center  gap-[5px] ">
+          <b className=" leading-[2rem] shrink-0 ">{hour}</b>
+          <i className="bi bi-clock"></i>
         </div>
       </div>
       <div className="self-stretch flex flex-col items-end justify-start py-[0rem] px-[0.937rem] gap-[0.312rem] text-center text-[1rem] font-h6-16">
-        <span className="w-[5.625rem] rounded-sm bg-primary h-[2.5rem] overflow-hidden shrink-0 flex flex-row items-center justify-center py-[0.5rem] px-[0.75rem] box-border">
-          <div className="w-[4rem] relative leading-[2rem] font-medium inline-block shrink-0">
-            {category}
-          </div>
-        </span>
-        <div className="self-stretch flex flex-col items-start justify-start grow-[1] text-right text-title font-h6-bold-16">
-          <b className="self-stretch relative leading-[2rem]">{title}</b>
-          <p className="m-0 self-stretch relative text-[0.875rem] leading-[2rem] font-medium text-paragraph mt-[-0.125rem]">
-            <span className="block">{caption}</span>
-            <span className="block">
-              نامفهوم از صنفت چاپ ، و با استفاده از طراحان گرافیک است.
-            </span>
+        <div className="h-[30px] text-sm  w-[70px]  flex  justify-center items-center shrink-0 bg-primary">
+          {category}
+        </div>
+        <div className="self-stretch flex flex-col overflow-hidden items-start justify-start grow-[1] text-right text-title ">
+          <b className="self-stretch leading-[2rem]">{title}</b>
+          <p className="m-0 self-stretch  text-[0.875rem] leading-[2rem] font-medium text-paragraph mt-[-0.125rem]">
+            {caption}
           </p>
         </div>
-        <div className="w-[6.313rem] h-[1.938rem] flex flex-row items-center justify-center py-[0.625rem] px-[0rem] box-border text-[0.75rem] text-subtitle font-inter">
-          <span className="flex-1 relative">
-            <span className="leading-[2.5rem]">(</span>
-            <span className="leading-[2.667rem] font-medium font-h6-16">
-              {voit}
-            </span>
-            <span className="leading-[2.5rem]">)</span>
-          </span>
-          <div className="self-stretch flex-1 flex flex-row items-center justify-center py-[0rem] px-[0.625rem] ml-[-0.938rem] text-[0.875rem] text-primary-orange font-epilogue">
-            <img
-              className="w-[0.938rem] relative h-[0.938rem] overflow-hidden shrink-0 object-cover"
-              alt=""
-              src="/star-1@2x.png"
-            />
-            <b className="flex-1 relative leading-[2.25rem] inline-block h-[2rem] ml-[-0.875rem]">
-              {rating}
-            </b>
-          </div>
+        <div className=" self-stretch flex flex-row items-center justify-end gap-[10px] ">
+          <span className="text-xs  font-medium text-paragraph ">{`(${voit})`}</span>
+          <Rating initialValue={rating} readonly size={15} />
         </div>
       </div>
     </div>

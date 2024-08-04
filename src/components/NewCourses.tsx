@@ -27,38 +27,38 @@ const NewCourses: FunctionComponent<NewCoursesType> = ({ className = "" }) => {
         <div className="self-stretch flex flex-row flex-wrap items-center justify-center gap-[1.25rem_0.625rem] text-right text-white">
           <NewCoursesItem
             hour="25 ساعت"
-            caption="لورم ایپسوم متن ساختگی با تولید سادگی"
+            caption="  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنفت چاپ ، و با استفاده از طراحان گرافیک است" 
             category="دسته دوره"
             image="/6fb69121166a4a5dbc8953d9e5c63975data20copy206-1@2x.png"
             voit="2رای"
-            rating="5"
+            rating={4}
             title="عنوان دوره"
           />
           <NewCoursesItem
             hour="25 ساعت"
-            caption="لورم ایپسوم متن ساختگی با تولید سادگی"
+            caption=" لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنفت چاپ ، و با استفاده از طراحان گرافیک است"
             category="دسته دوره"
             image="/6fb69121166a4a5dbc8953d9e5c63975data20copy206-1@2x.png"
             voit="2رای"
-            rating="5"
+            rating={3}
             title="عنوان دوره"
           />
           <NewCoursesItem
             hour="25 ساعت"
-            caption="لورم ایپسوم متن ساختگی با تولید سادگی"
+            caption=" لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنفت چاپ ، و با استفاده از طراحان گرافیک است"
             category="دسته دوره"
             image="/6fb69121166a4a5dbc8953d9e5c63975data20copy206-1@2x.png"
             voit="2رای"
-            rating="5"
+            rating={2}
             title="عنوان دوره"
           />
           <NewCoursesItem
             hour="25 ساعت"
-            caption="لورم ایپسوم متن ساختگی با تولید سادگی"
+            caption=" لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنفت چاپ ، و با استفاده از طراحان گرافیک است"
             category="دسته دوره"
             image="/6fb69121166a4a5dbc8953d9e5c63975data20copy206-1@2x.png"
             voit="2رای"
-            rating="5"
+            rating={3}
             title="عنوان دوره"
           />
         </div>

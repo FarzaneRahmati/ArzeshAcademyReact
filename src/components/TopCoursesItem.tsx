@@ -25,7 +25,7 @@ const TopCoursesItem: FunctionComponent<TopCoursesItemType> = ({
     <div
       className={`self-stretch flex flex-row flex-wrap items-center justify-center relative gap-[6.25rem_9.375rem] min-w-[25rem] text-right text-[0.875rem] text-title font-h6-bold-16 ${className}`}
     >
-      <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-[3.125rem] absolute !m-[0] top-[calc(50%_-_26px)] left-[0rem] h-[3.125rem] overflow-hidden shrink-0 z-[0]">
+      {/* <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-[3.125rem] absolute !m-[0] top-[calc(50%_-_26px)] left-[0rem] h-[3.125rem] overflow-hidden shrink-0 z-[0]">
         <img
           className="absolute h-4/5 w-4/5 top-[9.6%] right-[10%] bottom-[10.4%] left-[10%] max-w-full overflow-hidden max-h-full"
           alt=""
@@ -48,7 +48,7 @@ const TopCoursesItem: FunctionComponent<TopCoursesItemType> = ({
           alt=""
           src="/vector3.svg"
         />
-      </button>
+      </button> */}
       <div className="h-[21.875rem] flex flex-row items-center justify-center p-[0.625rem] box-border min-w-[20rem] z-[2]">
         <img
           className="w-[15rem] relative rounded h-[15rem] object-cover min-w-[18.75rem]"
@@ -67,14 +67,12 @@ const TopCoursesItem: FunctionComponent<TopCoursesItemType> = ({
               <span className="block">فراگیران آکادمی ارزش</span>
             </p>
           </div>
-          <ul className="m-0 w-[20.313rem] flex flex-row items-center justify-end [direction:rtl]">
-            <div className="w-[20.313rem] relative leading-[2rem] font-medium inline-block shrink-0">
-              <ul className="m-0 font-inherit text-inherit pl-[1.357rem]">
+        
+              <ul className="m-0 font-inherit text-inherit pl-[1.357rem] pr-[2rem] [direction:rtl]">
                 <li>هدف اول دوره</li>
                 <li>هدف دوم دوره</li>
               </ul>
-            </div>
-          </ul>
+          
         </div>
         <div className="self-stretch shadow-[0px_0px_10px_rgba(23,_26,_31,_0.42)] rounded-lg bg-white flex flex-row items-center [justify-content:right] py-[2rem] px-[1rem] box-border gap-[1rem] h-[6rem] w-[19rem] text-dimgray">
           <div className="flex flex-col items-end justify-center gap-[0rem]">
